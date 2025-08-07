@@ -11,7 +11,7 @@ import {
 } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import type { UploadProps } from "antd";
-import type { Dayjs } from "dayjs";
+// import type { Dayjs } from "dayjs";
 import "./JobPost.css"; // import CSS ปกติ
 import UploadImages from "./UploadImages";
 
@@ -48,7 +48,7 @@ const JobDescriptionSection: React.FC = () => {
   // };
 
   return (
-    <div>
+    <div className="form-container">
       {/* รายละเอียดงาน */}
       <Form.Item
         label={<span className="label">รายละเอียดงาน</span>}
@@ -150,7 +150,6 @@ const JobDescriptionSection: React.FC = () => {
       </Form.Item>
 
       {/* คำเตือน */}
-
       <Alert
         className="custom-job-description-note"
         message="สำหรับ “โพสต์จ้างงาน” เท่านั้น"
@@ -161,11 +160,11 @@ const JobDescriptionSection: React.FC = () => {
       />
 
       {/* ปุ่มยืนยัน */}
-      <div style={{ display: "flex", justifyContent: "center", marginTop: 24 }}>
+      <div className="submit-button-wrapper">
         <Button
           type="primary"
           size="large"
-          style={{ padding: "0.5rem 4rem" }}
+          className="submit-button"
           htmlType="submit"
         >
           ยืนยัน
@@ -176,9 +175,3 @@ const JobDescriptionSection: React.FC = () => {
 };
 
 export default JobDescriptionSection;
-
-
-
-
-
-

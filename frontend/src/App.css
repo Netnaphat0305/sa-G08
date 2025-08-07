@@ -1,24 +1,25 @@
-  /* Styles เฉพาะใน component App */
-  /* .container{
-    border: 1px solid red;
-    width: 100vw;
-    height: 100vh;
-  } */
-   
+/* Styles เฉพาะใน component App */
+/* .container {
+  border: 1px solid red;  ตัวอย่างสำหรับ debug ขอบแดง
+  width: 100vw;
+  height: 100vh;
+} */
+
 .container {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
-body{
-  margin: 0;
+
+body {
+  margin: 0; /* ลบ margin default ของ browser */
 }
 
 .center-wrapper {
   display: flex;
   justify-content: center;  /* จัดกึ่งกลางแนวนอน */
-  align-items: flex-start;  /* ชิดบน (ไม่กึ่งกลางแนวตั้ง) */
-  margin-top: 5px;         /* เว้นระยะจาก navbar ลงมา (ปรับเลขตาม navbar จริง) */
+  align-items: flex-start;  /* ชิดบน ไม่กึ่งกลางแนวตั้ง */
+  margin-top: 5px;          /* เว้นระยะจาก navbar ลงมา */
   padding: 20px;
   width: 100%;
 }
@@ -45,21 +46,19 @@ body{
   box-shadow: 0 0 1px #0088FF; /* เงานิดๆ เพื่อความสวย */
 }
 
-/* * {
-  outline: 1px solid red !important;
-} */
-
+/* ป้องกันการเลื่อนแนวนอน */
 html, body, #root {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow-x: hidden; /* ป้องกันการขยับแนวนอน */
-  box-sizing: border-box;
+  overflow-x: hidden;
+  box-sizing: border-box; /* กำหนด box-sizing ให้เริ่มต้น */
 }
 
+/* ตั้งค่า box-sizing ให้สืบทอดจาก html/body */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; /* สืบทอดจาก html/body */
+  box-sizing: inherit;
 }

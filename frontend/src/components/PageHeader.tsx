@@ -4,6 +4,7 @@ import "./PageHeader.css";
 
 interface PageHeaderProps {
   title: string;
+  className?: string;  // ✅ ลองรับ classname
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {

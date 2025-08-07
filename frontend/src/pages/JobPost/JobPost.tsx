@@ -5,19 +5,31 @@ import Location from "./Location";
 import WorkTimeAndDeadline from "./WorkTimeAndDeadline";
 import JobPostingSection from "./JobPostingSection";
 import "./JobPost.css"; // import CSS ปกติ
-import PageHeader from "../../components/PageHeader";
-import Navbar from "../../components/Navbar";
-
+import PageHeader from "../../components/PageHeader"; 
 
 const JobPost: React.FC = () => {
   return (
-    <div style={{ paddingTop: 32, display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <PageHeader title="รายละเอียดประกาศงาน" />
-      <Form layout="vertical" style={{ width: "100%", maxWidth: 800 }} autoComplete="off">
+    <div
+      style={{
+        paddingTop: 50,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Form
+        layout="vertical"
+        style={{ width: "100%", maxWidth: 800 }}
+        autoComplete="off"
+      >
+        <div className="JopPost-container">
+          <PageHeader title="รายละเอียดประกาศงาน" />
+        </div>
+
         <Form.Item
           label={<span className="label">ชื่องาน</span>}
-          name="fullName"
-          rules={[{ required: true,  message: "กรุณากรอกชื่องาน" }]}
+          name="Name"
+          rules={[{ required: true, message: "กรุณากรอกชื่องาน" }]}
         >
           <Input
             placeholder="กรอกชื่องาน"
@@ -30,7 +42,6 @@ const JobPost: React.FC = () => {
         <Location />
         <WorkTimeAndDeadline />
         <JobPostingSection />
-        
       </Form>
     </div>
   );

@@ -1,12 +1,10 @@
-// Board.tsx
 import React from "react";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import "./Board.css";
 import Announcement from "../../assets/Announcement.svg";
 import PostBoard from "./PostBoard";
-import '../../index.css';
-
+import "../../index.css";
 
 const Board: React.FC = () => {
   const navigate = useNavigate();
@@ -18,16 +16,19 @@ const Board: React.FC = () => {
           <div className="subheadline">
             <h1>ผู้ว่าจ้างโพสต์งานเพื่อหาคนที่ใช่</h1>
             <h1>นักศึกษาเลือกงานที่สนใจ !</h1>
-            <Button
-              type="primary"
-              onClick={() => navigate("/post-job")}
-              className="btn-startpost"
-            >
-              เริ่มโพสต์ได้เลย
-            </Button>
-            <Button type="primary" className="btn-mypost">
-              โพสต์ของฉัน
-            </Button>
+
+            <div className="button-row">
+              <Button
+                type="primary"
+                className="btn-startpost"
+                onClick={() => navigate("/post-job")}
+              >
+                เริ่มโพสต์ได้เลย
+              </Button>
+              <Button type="primary" className="btn-mypost">
+                โพสต์ของฉัน
+              </Button>
+            </div>
           </div>
 
           <div className="banner-container">
@@ -39,8 +40,8 @@ const Board: React.FC = () => {
               </p>
               <Button
                 type="primary"
-                onClick={() => navigate("/post-job")}
                 className="no-border-button"
+                onClick={() => navigate("/post-job")}
               >
                 เริ่มโพสต์ได้เลย
               </Button>
@@ -50,6 +51,7 @@ const Board: React.FC = () => {
           </div>
         </div>
       </div>
+
       <PostBoard />
     </>
   );
