@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import PageHeader from "../../components/PageHeader";
 import "./ApplyJob.css";
+import JobAppDetail from "./AppJobDetail";
 
 
 const ApplyJob: React.FC = () => {
@@ -34,6 +35,7 @@ const ApplyJob: React.FC = () => {
           </div>
         </div>
       </div>
+      <JobAppDetail />
     </div>
   );
 };

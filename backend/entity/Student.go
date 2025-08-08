@@ -1,8 +1,8 @@
 package entity
 
 import (
-	"time"
 	"gorm.io/gorm"
+	"time"
 )
 
 type GenderEnum string
@@ -27,7 +27,6 @@ type Student struct {
 	Faculty   string     `gorm:"type:varchar(255);not null" json:"faculty"`
 	Phone     string     `gorm:"type:varchar(20);not null" json:"phone"`
 	// FK
-	UserID uint  `gorm:"not null" json:"user_id"`
-	User   User  `gorm:"foreignKey:UserID" json:"user"`
+	UserID uint `gorm:"not null" json:"user_id"`
+	User   User `gorm:"foreignKey:UserID" json:"user"`
 }
-
